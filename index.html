@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PALIMAR HOME PRODUCTS | Quality Home Products</title>
+<meta name="description" content="PALIMAR HOME PRODUCTS - quality home products from Palimar. Order directly through WhatsApp.">
+<style>
+:root{--green:#166534;--green2:#22c55e;--dark:#10251a;--cream:#f7f5ed;--white:#fff;--muted:#66736b;--shadow:0 14px 40px rgba(16,37,26,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e9eee9}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:900;letter-spacing:.4px;color:var(--green);font-size:20px}
+nav{display:flex;gap:25px;align-items:center;font-weight:700;font-size:14px}
+nav a:hover{color:var(--green2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(22,101,52,.18)}
+.btn-primary:hover{transform:translateY(-2px);background:#115329}
+.btn-light{background:#fff;color:var(--green);border:1px solid #dce8df}
+.hero{background:linear-gradient(135deg,#eff8f0 0%,#fff 55%,#f5fbf6 100%);padding:88px 0 78px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+.kicker{display:inline-block;background:#dcfce7;color:#166534;border-radius:999px;padding:7px 13px;font-weight:800;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-2.5px;margin-bottom:20px}
+.hero p{font-size:19px;color:var(--muted);max-width:600px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{min-height:390px;border-radius:28px;background:linear-gradient(145deg,#14532d,#22c55e);display:flex;align-items:center;justify-content:center;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:before,.hero-card:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.10)}
+.hero-card:before{width:300px;height:300px;right:-80px;top:-90px}
+.hero-card:after{width:220px;height:220px;left:-80px;bottom:-80px}
+.logo-placeholder{position:relative;z-index:1;text-align:center;color:white}
+.logo-mark{width:110px;height:110px;border:3px solid rgba(255,255,255,.8);border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-size:40px;font-weight:900}
+.logo-placeholder h2{font-size:30px;line-height:1.1}
+.logo-placeholder p{color:#dcfce7;margin-top:8px;font-size:15px}
+section{padding:78px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 38px}
+.section-head h2{font-size:38px;letter-spacing:-1px;margin-bottom:10px}
+.section-head p{color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{padding:28px;border:1px solid #e7eee8;border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+.icon{font-size:30px;margin-bottom:12px}
+.feature h3{margin-bottom:6px}
+.feature p{color:var(--muted)}
+.products{background:var(--cream)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:#fff;border-radius:18px;overflow:hidden;border:1px solid #e7eee8;box-shadow:0 8px 28px rgba(16,37,26,.07)}
+.product-img{height:210px;background:linear-gradient(135deg,#e8f5ea,#f8faf8);display:grid;place-items:center;color:#7a8a7e;font-weight:800;font-size:18px}
+.product-body{padding:21px}
+.product-body h3{margin-bottom:7px}
+.product-body p{color:var(--muted);font-size:14px;margin-bottom:17px}
+.product .btn{width:100%}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-box{background:#f1f8f2;border-radius:24px;padding:38px}
+.about-box h2{font-size:38px;line-height:1.1;margin-bottom:15px}
+.about-box p{color:var(--muted);margin-bottom:20px}
+.contact{background:var(--dark);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact h2{font-size:40px;line-height:1.1;margin-bottom:14px}
+.contact p{color:#c8d5cc}
+.contact-card{background:#fff;color:var(--dark);border-radius:20px;padding:28px}
+.contact-row{padding:14px 0;border-bottom:1px solid #e8ece9}
+.contact-row:last-child{border-bottom:0}
+.contact-row strong{display:block;color:var(--green);font-size:13px;text-transform:uppercase;letter-spacing:.7px}
+footer{background:#09170e;color:#b8c7bc;padding:24px 0;text-align:center;font-size:13px}
+.mobile-menu{display:none}
+@media(max-width:800px){
+ nav{display:none}.mobile-menu{display:block}
+ .hero{padding:55px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero-card{min-height:300px}.features,.product-grid{grid-template-columns:1fr}
+ h1{font-size:48px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><img src="logo.jpg" alt="PALIMAR HOME PRODUCTS" style="height:48px;width:48px;object-fit:cover;border-radius:50%;vertical-align:middle;margin-right:9px;">PALIMAR HOME PRODUCTS</a>
+    <nav>
+      <a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://wa.me/917892073731?text=Hello%20PALIMAR%20HOME%20PRODUCTS%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+    </nav>
+    <a class="mobile-menu btn btn-primary" href="https://wa.me/917892073731?text=Hello%20PALIMAR%20HOME%20PRODUCTS%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="kicker">QUALITY • VALUE • LOCAL SERVICE</span>
+      <h1>Better products for everyday homes.</h1>
+      <p>Welcome to <strong>PALIMAR HOME PRODUCTS</strong>. Explore our products and order directly through WhatsApp — simple, quick and convenient.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#products">Explore Products</a>
+        <a class="btn btn-light" href="https://wa.me/917892073731?text=Hello%20PALIMAR%20HOME%20PRODUCTS%2C%20please%20share%20your%20product%20catalog." target="_blank">Get Catalog</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="logo-placeholder">
+        <img src="logo.jpg" alt="PALIMAR HOME PRODUCTS logo" style="width:min(300px,80vw);height:auto;border-radius:50%;background:#fff;padding:8px;">
+        <p style="margin-top:14px">Quality you can trust</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><h2>Why choose us?</h2><p>We make buying everyday home products easy and direct.</p></div>
+    <div class="features">
+      <div class="feature"><div class="icon">✓</div><h3>Quality Products</h3><p>Products selected with everyday household needs in mind.</p></div>
+      <div class="feature"><div class="icon">💬</div><h3>Easy WhatsApp Ordering</h3><p>Click any product and start an order conversation instantly.</p></div>
+      <div class="feature"><div class="icon">🏠</div><h3>Local Business</h3><p>Serving customers from Palimar with friendly, direct service.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head"><h2>Our Products</h2><p>Replace these sample cards with your actual products, photos and prices.</p></div>
+    <div class="product-grid">
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 01</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 01" href="#">Order on WhatsApp</a></div></article>
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 02</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 02" href="#">Order on WhatsApp</a></div></article>
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 03</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 03" href="#">Order on WhatsApp</a></div></article>
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 04</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 04" href="#">Order on WhatsApp</a></div></article>
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 05</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 05" href="#">Order on WhatsApp</a></div></article>
+      <article class="product"><div class="product-img">Product Photo</div><div class="product-body"><h3>Home Product 06</h3><p>Quality household product. Add your product details here.</p><a class="btn btn-primary order-btn" data-product="Home Product 06" href="#">Order on WhatsApp</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-box"><h2>PALIMAR HOME PRODUCTS</h2><p>Our goal is to make useful, quality home products accessible to customers with a simple ordering experience.</p><a class="btn btn-primary" href="https://wa.me/917892073731?text=Hello%20PALIMAR%20HOME%20PRODUCTS%2C%20I%20would%20like%20more%20information." target="_blank">Talk to Us</a></div>
+    <div><h2>Simple. Direct. Convenient.</h2><p>Browse the products, choose what you need and tap the WhatsApp button. Your order request opens directly in WhatsApp.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div><h2>Let's talk about your order.</h2><p>For product availability, pricing or orders, contact PALIMAR HOME PRODUCTS directly.</p></div>
+    <div class="contact-card">
+      <div class="contact-row"><strong>WhatsApp / Phone</strong>7892073731</div>
+      <div class="contact-row"><strong>Address</strong>3-58(A), Near Hoige Anganavadi, Palimar-574112</div>
+      <div style="margin-top:18px"><a class="btn btn-primary" style="width:100%" href="https://wa.me/917892073731?text=Hello%20PALIMAR%20HOME%20PRODUCTS%2C%20I%20want%20to%20place%20an%20order." target="_blank">Start WhatsApp Order</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> PALIMAR HOME PRODUCTS. All rights reserved.</footer>
+<script>
+const phone="917892073731";
+document.querySelectorAll(".order-btn").forEach(btn=>{
+  const product=btn.dataset.product;
+  btn.href=`https://wa.me/${phone}?text=${encodeURIComponent("Hello PALIMAR HOME PRODUCTS, I would like to order: "+product+". Please share the price and availability.")}`;
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
